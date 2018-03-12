@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.foxy.current.affairs.QuizActivity">
+
+    <include layout="@layout/toolbar_layout" />
+
+    <com.gturedi.views.StatefulLayout
+        android:id="@+id/stateful"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/toolbar"
+        app:stfAnimationEnabled="true"
+        app:stfInAnimation="@android:anim/slide_in_left"
+        app:stfOutAnimation="@android:anim/slide_out_right">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/questionCardView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp">
+
+                <TextView
+                    android:id="@+id/questionTextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="16dp"
+                    android:text="This is a Question?" />
+            </android.support.v7.widget.CardView>
+
+            <RadioGroup
+                android:id="@+id/optionsRadioGroup"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/questionCardView"
+                android:layout_margin="16dp">
+
+                <android.support.v7.widget.AppCompatRadioButton
+                    android:id="@+id/optionA"
+                    android:layout_margin="5dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="option A" />
+
+                <android.support.v7.widget.AppCompatRadioButton
+                    android:id="@+id/optionB"
+                    android:layout_margin="5dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="option B" />
+
+                <android.support.v7.widget.AppCompatRadioButton
+                    android:id="@+id/optionC"
+                    android:layout_margin="5dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="option C" />
+
+                <android.support.v7.widget.AppCompatRadioButton
+                    android:id="@+id/optionD"
+                    android:layout_margin="5dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="option D" />
+            </RadioGroup>
+
+
+            <TextView
+                android:id="@+id/answerTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/optionsRadioGroup"
+                android:layout_marginBottom="20dp"
+                android:background="@color/colorAccent"
+                android:padding="16dp"
+                android:text="You are right"
+                android:textColor="@color/colorWhite"
+                android:textSize="18sp"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/next"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:background="@color/colorAccent"
+                android:text="NEXT"
+                android:textColor="@color/colorWhite"
+                android:textSize="16sp" />
+        </RelativeLayout>
+
+    </com.gturedi.views.StatefulLayout>
+</RelativeLayout>

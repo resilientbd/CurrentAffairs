@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/save"
+        android:title="Save"
+        android:icon="@drawable/content_save"/>
+
+    <item android:id="@+id/jobcircular"
+        android:title="Job Circular"
+        android:icon="@drawable/job_search"/>
+
+    <item android:id="@+id/rate"
+        android:title="Rate Us"
+        android:icon="@drawable/thumb_up"/>
+
+    <item android:id="@+id/share"
+        android:title="Share"
+        android:icon="@drawable/share_variant"/>
+    <item android:id="@+id/aboutus"
+        android:title="About Us"
+        android:icon="@drawable/information"/>
+
+</menu>
